@@ -1,0 +1,174 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+/*  */
+
+body {
+    background-color: #ff7f50;
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+}
+
+.main-1{
+    margin: auto;
+    display: block;
+    background-color: #ff6348;
+}
+
+.kotak{
+    margin-left: 1.5rem;
+}
+
+.kotak li{
+    width:  200px;
+    height: 150px;
+    margin: 2rem 3rem;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-1,
+.kotak li,
+.kotak img,
+.kotak-span p,
+.overlay img{
+    border-radius: 5px;
+}
+
+.kotak .kotak-span{
+    width: 200px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .65);
+    opacity: 0;
+    transition: .5s;
+}
+
+.kotak-span p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5rem 1rem;
+    color: black;
+    border: 1px solid black;
+}
+
+.kotak .kotak-span:hover{
+    opacity: 1;
+}
+
+
+/* Overlay */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: 1s;
+    text-align: center;
+    padding: 4rem 0 5rem;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .65);
+}
+
+.overlay img{
+    width: 900px;
+    height: 600px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.overlay:target img{
+    animation: fade 5s;
+}
+
+/* parrent close button */
+.parrent-gambar{
+    position: absolute;
+    width: 900px;
+    height: 575px;
+    max-width: 100%;
+    max-height: 100%;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* close button overlay */
+.close-button{
+    position: absolute;
+    transform: scale(2.5);
+    color: #fff;
+    top: -.5rem;
+    right: -.5rem;
+}
+
+/* navigasi gambar*/
+.next-slide{
+    position: absolute;
+    transform: scale(3);
+    top: 50%;
+    right: 2%;
+    transform: (0, -50%);
+    color: #fff;
+}
+
+.prev-slide{
+    position: absolute;
+    transform: scale(3);
+    top: 50%;
+    left: 2%;
+    transform: (0, -50%);
+    color: #fff;
+}
+
+/* animasi */
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* footer */
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #EE5A24;
+    width: 100%;
+}
+
+footer p {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: .5rem;
+}
